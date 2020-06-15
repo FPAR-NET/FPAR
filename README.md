@@ -1,5 +1,5 @@
-# FPAR
-#### A neural network capable of performing first person action recognition
+# First Person Action Recognition: different approaches exploiting Self-Supervised Task and 2-in-1 Flow Modulation
+#### A work by Paolo Alberto, Lorenzo De Nisi, Carmine De Stefano
 
 While the classification of third-person human actions has seen a lot of progress in the last decade, the more niche task of detecting first-person actions can still be considered as a less explored field, and has seen some interesting developments in recent years.
 With this model we explore different methods for performing a first person action recognition task on the [GTEA61](http://cbs.ic.gatech.edu/fpv/) dataset, starting from [Ego-RNN](https://github.com/swathikirans/ego-rnn): a two stream architecture that works separately on the frames of the videos and on motion features extracted from optical flow. Details for all the steps are provided in the available [paper](https://github.com/FPAR-NET/FPAR/raw/master/paper.pdf).
