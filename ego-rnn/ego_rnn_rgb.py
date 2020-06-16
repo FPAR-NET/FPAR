@@ -43,10 +43,10 @@ def main_run(version, stage, train_data_dir, stage1_dict, out_dir, seqLen, train
 
     vid_seq_val = makeDataset(train_data_dir, val_usr,
                               spatial_transform=Compose([Scale(256), CenterCrop(224), ToTensor(), normalize]),
-                              seqLen=seqLen)
+                              seqLen=seqLen, phase="test")
 
     val_loader = torch.utils.data.DataLoader(vid_seq_val, batch_size=valBatchSize,
-                                             shuffle=False, num_workers=2, pin_memory=True, phase="test")
+                                             shuffle=False, num_workers=2, pin_memory=True, )
 
     train_params = []
 
