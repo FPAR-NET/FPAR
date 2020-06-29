@@ -12,17 +12,17 @@ Ego-RNN is a network from the 2018 [paper](https://arxiv.org/abs/1807.11794): "A
 ## Class activation maps
 The original Ego-RNN model makes use of class specific saliency maps, capable of identifying the image regions that are been used by the CNN to identify the class under consideration. However, oftentimes these maps cannot be considered as representative of the activity. As we can see from the animations below, the addition of the MS task proved to be helpful for the identification of the correct regions.
 
-Before MS task  |  After MS task 
+Before MS task  |  After MS task
 :-------------------------:|:-------------------------:
 ![](media/close_jam_no_ms.gif)| ![](media/close_jam.gif)
 
-Before MS task  |  After MS task 
+Before MS task  |  After MS task
 :-------------------------:|:-------------------------:
 ![](media/open_mayo_no_ms.gif)| ![](media/open_mayo.gif)
 
 The improvements obtained by adding this task can be observed also on videos not belonging to the GTEA61 dataset originally used for training. Here is an example with a home-made video, where we can see how the improved model tends to focus more on the regions of the image portraying the action.
 
-Before MS task  |  After MS task 
+Before MS task  |  After MS task
 :-------------------------:|:-------------------------:
 ![](media/glass_attentioned_no_mstask.gif)| ![](media/glass_attentioned.gif)
 
@@ -37,6 +37,12 @@ After implementing the MS task both as originally conceived in the paper and as 
 In order to visualize better the mechanics involved in the implemented motion layers, we can plot the output of the first layer of ResNet before and after the application of the two motion layers, and also the inputs coming from β and γ.
 
 
-Before motion layers  |  Beta |  Gamma |  After motion layers 
+Before motion layers  |  Beta |  Gamma |  After motion layers
 :---------------------:|:---------------------:|:---------------------:|:---------------------:
 ![](media/pre.png)| ![](media/beta.png)|![](media/gamma.png)|![](media/post.png)
+
+## Pretrained models
+
+We provide the dictionaries for all of the trained models at the following link:
+
+https://drive.google.com/drive/folders/1x0SMzGXXk8Hc86EZjjEEK6hmQ-Uq66St?usp=sharing
